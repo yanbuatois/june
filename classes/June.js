@@ -106,7 +106,6 @@ class June extends CommandClient {
         }
         await Promise.all([this.saveNewsIds(), (async () => {
           const richEmbed = new RichEmbed();
-          richEmbed.setAuthor('June');
           richEmbed.setColor('ORANGE');
           const description = striptags(item.body.replace(/<br?\/>/, '\n')).slice(0,2000) + '...';
           richEmbed.setDescription(description);
@@ -123,12 +122,12 @@ class June extends CommandClient {
               this._newsChannels = this._newsChannels.splice(index, 1);
               return this.saveNewsChannels();
             }
-            return channel.send(`:newspaper: A news just released on Urban Rivals: **${item.title}**`, richEmbed);
+            return channel.send(`:newspaper:**${item.title}**`, richEmbed);
           }));
         })()]);
       }
     }
-    this.newsFetcher = setTimeout(newsFetcherFunction, 60 * 1000);
+    this.newsFetcher = setTimeout(newsFetcherFunction, 5 * 60 * 1000);
   }
 
   registerAllCommands() {
