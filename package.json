@@ -1,0 +1,34 @@
+{
+  "name": "june",
+  "version": "1.0.0",
+  "description": "News Discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanbuatois/june.git"
+  },
+  "keywords": [
+    "discord",
+    "urban",
+    "rivals",
+    "news"
+  ],
+  "author": "Dracoctix",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yanbuatois/june/issues"
+  },
+  "homepage": "https://github.com/yanbuatois/june#readme",
+  "dependencies": {
+    "discord-js-command-client": "^1.0.1",
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.0.0",
+    "mkdirp": "^0.5.1",
+    "striptags": "^3.1.1",
+    "urban-rivals-oauth": "^1.0.0"
+  }
+}
